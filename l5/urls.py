@@ -15,10 +15,6 @@ models_router.register(r'models', shop_views.ModelsOfTypeViewSet, basename='mode
 
 stock_router=routers.NestedDefaultRouter(models_router, r'models', lookup='models')
 stock_router.register(r'stock', shop_views.StockOfModelViewSet, basename='stock-of-model')
-#
-# buy_router=routers.NestedDefaultRouter(stock_router, r'stock', lookup='buy')
-# buy_router.register(r'buy', shop_views.BuyViewSet, basename='buy_stock')
-
 
 
 urlpatterns = [
